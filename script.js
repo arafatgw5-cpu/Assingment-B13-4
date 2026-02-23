@@ -70,3 +70,52 @@ const job = document.getElementById("job-" + id);
 
     updateJobs();
 }
+const allCards = document.querySelectorAll(".job-card");
+function updateJobs() {
+    const jobs = document.querySelectorAll(".job-card");
+    let total     = jobs.length;
+    let interview = 0;
+    let rejected  = 0;
+    let showing   = 0;
+
+    jobs.forEach(job => {
+        const status = job.getAttribute("status") || "none";
+        console.log(job.id, "→ status:", status);
+
+        if (status === "interview") interview++;
+        if (status === "rejected")  rejected++;
+
+        if (currentTab === "all" || status === currentTab) {
+            job.style.display = "block";
+            showing++;
+        } else {
+            job.style.display = "none";
+        }
+    });
+
+    console.log("total:", total, "| interview:", interview, "| rejected:", rejected, "| showing:", showing);
+    const emptyState = document.getElementById("emptyState");
+
+    if (showing === 0 && currentTab !== "all") {
+        emptyState.classList.remove("hidden");
+        document.getElementById("emptyTitle").textContent = currentTab === "interview" ? "No Interview Jobs Available" : "No Rejected Jobs Available";
+        document.getElementById("emptySub").textContent   = currentTab === "interview" ? "Mark jobs as Interview to see them here." : "Jobs you reject will appear here.";
+    } else {
+        emptyState.classList.add("hidden");
+    }
+
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+        const isActive = btn.getAttribute("data-tab") === currentTab;
+        btn.className  = "tab-btn px-3 py-1 border rounded transition-all duration-200" + (isActive ? " bg-[#002c5c] text-white border-[#002c5c]" : "");
+    });
+
+    document.getElementById("totalCount").innerText     = total;
+    document.getElementById("interviewCount").innerText = interview;
+    document.getElementById("rejectedCount").innerText  = rejected;
+    document.getElementById("jobCount").innerText       = showing + " Jobs";
+}
+updateJobs();
+function switchTab(Tab){
+    currentTab = Tab;
+    updateJobs();
+}
