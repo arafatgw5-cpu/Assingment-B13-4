@@ -58,13 +58,171 @@
     <p id="emptySub" class="text-gray-400 text-sm"></p>
 </div>
 <!-- JOB  -->
+<!-- JOB LIST -->
 <section>
-    <!-- job 1 -->
- <div id="jobs" class="flex flex-col gap-4">
-<div>
-    
+    <div id="jobs" class="flex flex-col gap-4">
+        
+                <!-- CARD 1 -->
+                <div id="job-1" class="job-card bg-white p-4 rounded shadow">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                        <div>
+                            <h3 class="font-bold">Mobile First Corp</h3>
+                            <p>React Native Developer</p>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2 sm:mt-0">
+                            <span class="status-badge hidden px-2 py-0.5 rounded text-sm"></span>
+                            <button onclick="deleteJob(1)">🗑</button>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-2">Remote • Full-time • $130,000 - $175,000</p>
+                    <p class="mt-2 text-sm">Build cross-platform mobile applications using React Native.</p>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        <button onclick="setStatus(1,'interview')"
+                            class="btn-interview px-3 py-1 border rounded transition-all duration-200">Interview</button>
+                        <button onclick="setStatus(1,'rejected')"
+                            class="btn-rejected px-3 py-1 border rounded transition-all duration-200">Rejected</button>
+                    </div>
+                </div>
+                <!-- CARD 2 -->
+<div id="job-2" class="job-card bg-white p-4 rounded shadow">
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+        <div>
+            <h3 class="font-bold">WebFlow Agency</h3>
+            <p>Web Designer & Developer</p>
+        </div>
+        <div class="flex items-center gap-2 mt-2 sm:mt-0">
+            <span class="status-badge hidden px-2 py-0.5 rounded text-sm"></span>
+            <button onclick="deleteJob(2)">🗑</button>
+        </div>
+    </div>
+    <p class="text-sm text-gray-500 mt-2">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
+    <p class="mt-2 text-sm">Create stunning web experiences for high-profile clients.</p>
+    <div class="flex flex-wrap gap-2 mt-2">
+        <button onclick="setStatus(2,'interview')" class="btn-interview px-3 py-1 border rounded transition-all duration-200">Interview</button>
+        <button onclick="setStatus(2,'rejected')"  class="btn-rejected px-3 py-1 border rounded transition-all duration-200">Rejected</button>
+    </div>
 </div>
- </div>
+
+<!-- CARD 3 -->
+<div id="job-3" class="job-card bg-white p-4 rounded shadow">
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+        <div>
+            <h3 class="font-bold">DataViz Solutions</h3>
+            <p>Data Visualization Specialist</p>
+        </div>
+        <div class="flex items-center gap-2 mt-2 sm:mt-0">
+            <span class="status-badge hidden px-2 py-0.5 rounded text-sm"></span>
+            <button onclick="deleteJob(3)">🗑</button>
+        </div>
+    </div>
+    <p class="text-sm text-gray-500 mt-2">Boston, MA • Full-time • $125,000 - $165,000</p>
+    <p class="mt-2 text-sm">Create stunning web experiences for high-profile clients.</p>
+    <div class="flex flex-wrap gap-2 mt-2">
+        <button onclick="setStatus(3,'interview')" class="btn-interview px-3 py-1 border rounded transition-all duration-200">Interview</button>
+        <button onclick="setStatus(3,'rejected')"  class="btn-rejected px-3 py-1 border rounded transition-all duration-200">Rejected</button>
+    </div>
+</div>
+
+<!-- CARD 4 -->
+<div id="job-4" class="job-card bg-white p-4 rounded shadow">
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+        <div>
+            <h3 class="font-bold">CloudFirst Inc</h3>
+            <p>Backend Developer</p>
+        </div>
+        <div class="flex items-center gap-2 mt-2 sm:mt-0">
+            <span class="status-badge hidden px-2 py-0.5 rounded text-sm"></span>
+            <button onclick="deleteJob(4)">🗑</button>
+        </div>
+    </div>
+    <p class="text-sm text-gray-500 mt-2">Seattle, WA • Full-time • $140,000 - $190,000</p>
+    <p class="mt-2 text-sm">Design and maintain scalable backend systems using Python and AWS.</p>
+    <div class="flex flex-wrap gap-2 mt-2">
+        <button onclick="setStatus(4,'interview')" class="btn-interview px-3 py-1 border rounded transition-all duration-200">Interview</button>
+        <button onclick="setStatus(4,'rejected')"  class="btn-rejected px-3 py-1 border rounded transition-all duration-200">Rejected</button>
+    </div>
+</div>
+
+<!-- CARD 5 -->
+<div id="job-5" class="job-card bg-white p-4 rounded shadow">
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+        <div>
+            <h3 class="font-bold">Innovation Labs</h3>
+            <p>UI/UX Engineer</p>
+        </div>
+        <div class="flex items-center gap-2 mt-2 sm:mt-0">
+            <span class="status-badge hidden px-2 py-0.5 rounded text-sm"></span>
+            <button onclick="deleteJob(5)">🗑</button>
+        </div>
+    </div>
+    <p class="text-sm text-gray-500 mt-2">Austin, TX • Full-time • $110,000 - $150,000</p>
+    <p class="mt-2 text-sm">Create beautiful and functional user interfaces for our suite of products.</p>
+    <div class="flex flex-wrap gap-2 mt-2">
+        <button onclick="setStatus(5,'interview')" class="btn-interview px-3 py-1 border rounded transition-all duration-200">Interview</button>
+        <button onclick="setStatus(5,'rejected')"  class="btn-rejected px-3 py-1 border rounded transition-all duration-200">Rejected</button>
+    </div>
+</div>
+
+<!-- CARD 6 -->
+<div id="job-6" class="job-card bg-white p-4 rounded shadow">
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+        <div>
+            <h3 class="font-bold">MegaCorp Solutions</h3>
+            <p>JavaScript Developer</p>
+        </div>
+        <div class="flex items-center gap-2 mt-2 sm:mt-0">
+            <span class="status-badge hidden px-2 py-0.5 rounded text-sm"></span>
+            <button onclick="deleteJob(6)">🗑</button>
+        </div>
+    </div>
+    <p class="text-sm text-gray-500 mt-2">New York, NY • Full-time • $130,000 - $170,000</p>
+    <p class="mt-2 text-sm">Build enterprise applications with JavaScript and modern frameworks.</p>
+    <div class="flex flex-wrap gap-2 mt-2">
+        <button onclick="setStatus(6,'interview')" class="btn-interview px-3 py-1 border rounded transition-all duration-200">Interview</button>
+        <button onclick="setStatus(6,'rejected')"  class="btn-rejected px-3 py-1 border rounded transition-all duration-200">Rejected</button>
+    </div>
+</div>
+
+<!-- CARD 7 -->
+<div id="job-7" class="job-card bg-white p-4 rounded shadow">
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+        <div>
+            <h3 class="font-bold">StartupXYZ</h3>
+            <p>Full Stack Engineer</p>
+        </div>
+        <div class="flex items-center gap-2 mt-2 sm:mt-0">
+            <span class="status-badge hidden px-2 py-0.5 rounded text-sm"></span>
+            <button onclick="deleteJob(7)">🗑</button>
+        </div>
+    </div>
+    <p class="text-sm text-gray-500 mt-2">Remote • Full-time • $120,000 - $160,000</p>
+    <p class="mt-2 text-sm">Join our fast-growing startup and work on our core platform.</p>
+    <div class="flex flex-wrap gap-2 mt-2">
+        <button onclick="setStatus(7,'interview')" class="btn-interview px-3 py-1 border rounded transition-all duration-200">Interview</button>
+        <button onclick="setStatus(7,'rejected')"  class="btn-rejected px-3 py-1 border rounded transition-all duration-200">Rejected</button>
+    </div>
+</div>
+
+<!-- CARD 8 -->
+<div id="job-8" class="job-card bg-white p-4 rounded shadow">
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+        <div>
+            <h3 class="font-bold">TechCorp Industries</h3>
+            <p>Senior Frontend Developer</p>
+        </div>
+        <div class="flex items-center gap-2 mt-2 sm:mt-0">
+            <span class="status-badge hidden px-2 py-0.5 rounded text-sm"></span>
+            <button onclick="deleteJob(8)">🗑</button>
+        </div>
+    </div>
+    <p class="text-sm text-gray-500 mt-2">San Francisco, CA • Full-time • $130,000 - $175,000</p>
+    <p class="mt-2 text-sm">We are looking for an experienced Frontend Developer to build scalable web applications.</p>
+    <div class="flex flex-wrap gap-2 mt-2">
+        <button onclick="setStatus(8,'interview')" class="btn-interview px-3 py-1 border rounded transition-all duration-200">Interview</button>
+        <button onclick="setStatus(8,'rejected')"  class="btn-rejected px-3 py-1 border rounded transition-all duration-200">Rejected</button>
+    </div>
+</div>
+    </div>
 </section>
 
 </section>
