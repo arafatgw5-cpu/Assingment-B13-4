@@ -20,30 +20,37 @@
         Job Application Tracker
 </h1>
 <!-- DASHBOARD -->
+<!-- DASHBOARD CARDS -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6 text-center rounded-2xl border border-[#f1f2f4] p-4">
-    
     <div class="bg-white rounded shadow p-4">
         <p>Total</p>
         <h2 id="totalCount" class="text-xl font-bold">8</h2>
     </div>
-
     <div class="bg-white rounded shadow p-4">
         <p>Interview</p>
         <h2 id="interviewCount" class="text-xl font-bold text-green-600">0</h2>
     </div>
-
     <div class="bg-white rounded shadow p-4">
         <p>Rejected</p>
         <h2 id="rejectedCount" class="text-xl font-bold text-red-600">0</h2>
     </div>
-<!-- HEADER -->
- <div class="flex flex-col sm:flex-row justify-between mb-3">
-    <h2  class="text-[#002c5c] text-xl font-semibold mb-2">Available Jobs</h2>
-    <span id="jobCount">8 Jobs</span>
- </div>
- <!-- TABS -->
-
 </div>
+
+<!-- HEADER -->
+<div class="flex flex-col sm:flex-row justify-between mb-3">
+    <h2 class="text-[#002c5c] text-xl font-semibold mb-2">Available Jobs</h2>
+    <span id="jobCount">8 Jobs</span>
+</div>
+
+<!-- TABS -->
+<!-- TABS -->
+<div class="flex flex-wrap gap-2 mb-4">
+    <button data-tab="all"       onclick="switchTab('all')"       class="tab-btn px-3 py-1 border rounded transition-all duration-200 btn btn-info">All</button>
+    <button data-tab="interview" onclick="switchTab('interview')" class="tab-btn px-3 py-1 border rounded transition-all duration-200 btn btn-success">Interview</button>
+    <button data-tab="rejected"  onclick="switchTab('rejected')"  class="tab-btn px-3 py-1 border rounded transition-all duration-200 btn btn-error">Rejected</button>
+</div>
+
+
 
 <script src="script.js"></script>
 </body>
